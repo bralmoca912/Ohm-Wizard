@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './color-res.component.html',
   styles: ``
 })
-export class ColorResComponent {
+export default class ColorResComponent {
 
 }

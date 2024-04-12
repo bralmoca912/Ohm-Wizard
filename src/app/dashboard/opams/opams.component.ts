@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './opams.component.html',
   styles: ``
 })
-export class OpamsComponent {
+export default class OpamsComponent {
 
 }

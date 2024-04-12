@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './ohm-res.component.html',
   styles: ``
 })
-export class OhmResComponent {
+export default class OhmResComponent {
 
 }

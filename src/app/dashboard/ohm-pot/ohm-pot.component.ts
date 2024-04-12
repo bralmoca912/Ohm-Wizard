@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './ohm-pot.component.html',
   styles: ``
 })
-export class OhmPotComponent {
+export default class OhmPotComponent {
 
 }
