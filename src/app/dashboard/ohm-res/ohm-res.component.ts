@@ -13,11 +13,11 @@ export default class OhmResComponent {
 
   voltaje: number = 0;
   corriente: number = 0;
-  potencia: number = 0;
+  resistencia: number = 0;
 
-  clacpotencia(): void {
+  clacresistencia(): void {
     // title = 'Calculadoras de la Ley de Ohm';
-    this.potencia = this.voltaje * this.corriente;
+    this.resistencia = parseFloat((this.voltaje / this.corriente).toFixed(2));
   }
 
 }
