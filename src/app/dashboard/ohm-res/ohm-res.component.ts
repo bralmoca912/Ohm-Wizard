@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-ohm-res',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './ohm-res.component.html',
   styles: ``
 })
 export default class OhmResComponent {
 
-  resistencia: number = 0;
   voltaje: number = 0;
   corriente: number = 0;
   potencia: number = 0;
 
-  clacpotencia() {
+  clacpotencia(): void {
     this.potencia = this.voltaje * this.corriente;
   }
 
