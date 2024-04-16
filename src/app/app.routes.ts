@@ -11,11 +11,6 @@ export const routes: Routes = [
                 loadComponent: () => import('./dashboard/ohm-res/ohm-res.component')
             },
             {
-                path: 'ohm-pot',
-                title: 'Ley de Ohm (P-V-I)',
-                loadComponent: () => import('./dashboard/ohm-pot/ohm-pot.component')
-            },
-            {
                 path: 'color-res',
                 title: 'Resistencias por color',
                 loadComponent: () => import('./dashboard//color-res/color-res.component')
