@@ -10,4 +10,10 @@ import { TitleComponent } from '../../shared/title/title.component';
 })
 export default class ColorResComponent {
 
+  btnactual: number = 0;
+
+  color1(){
+    this.btnactual = 1;
+  }
+
 }
