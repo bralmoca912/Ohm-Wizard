@@ -1,20 +1,18 @@
 <!-- Barra lateral de navegación -->
-<div class="bg-slate-500 w-full h-full pt-2">
-    <div class="px-6">
-        <h1 class="text-lg md:text-2xl font-bold text-black">
+<div class="bg-slate-400 min-h-screen h-full pt-2 sm:w-32 md:w-48">
+    <div class="sm:px-2 mb-8">
+        <h1 class="text-lg sm:text-lg md:text-xl font-bold text-black">
             Ohm <span class="text-blue-500">W</span>izard
         </h1>
         <p class="text-slate-500 text-sm">Soluciones electrónicas</p>
     </div>
 
-    <div class="pl-1 py-8">
-        <a href="" class="inline-flex space-x-2 items-center">
-            <img class="w-20 rounded-full"
-                src="https://www.shutterstock.com/image-photo/electronic-circuit-board-close-up-600nw-1568488030.jpg"
-                alt="">
-            <p class="text-center">Welcome back</p>
-        </a>
-    </div>
+    <a href="" class="space-x-2 items-center px-2 flex flex-col mb-12">
+        <img class="w-20 rounded-full"
+            src="https://www.shutterstock.com/image-photo/electronic-circuit-board-close-up-600nw-1568488030.jpg"
+            alt="">
+        <p class="text-center">Welcome back</p>
+    </a>
 
     <nav class="mx-2">
         @for (item of menuItems; track $index) {
