@@ -6,9 +6,10 @@ module.exports = {
   theme: {
     screens:{ // Cambiamos el tamaño de las pantallas
       'sm': '0px',
-      'md': '585px',
-      'lg': '900px',
-      'xl': '1536px',
+      'md': '496px',
+      'lg': '585px',
+      'xl': '900px',
+      '2xl': '1536px',
     },
     extend: {},
   },
