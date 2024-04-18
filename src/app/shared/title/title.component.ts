@@ -6,7 +6,7 @@ import { Component, Input, booleanAttribute } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-  <h1 class="text-4xl text-center mb-10 mt-3">{{title}}</h1>
+  <h1 class="md:text-4xl sm:text-xl text-center sm:mb-3 md:mb-10 mt-3l">{{title}}</h1>
   `,
   styles: ``
 })
