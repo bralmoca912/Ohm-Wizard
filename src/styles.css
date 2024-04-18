@@ -4,9 +4,9 @@
 
 @layer{
     .box-res{ @apply
-        sm:max-w-72 sm:min-w-64 md:min-w-72 md:max-w-80 mb-5;
+        sm:max-w-60 sm:min-w-56 md:min-w-72 md:max-w-80 mb-5;
     }
     .in-res{ 
-        @apply text-center rounded-xl w-28;
+        @apply text-center rounded-xl sm:w-20 md:w-36;
     }
 }
