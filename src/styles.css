@@ -6,6 +6,14 @@
     .box-res{ @apply
         sm:max-w-60 sm:min-w-56 md:min-w-72 md:max-w-80 mb-5;
     }
+    .img-w-h{
+        /* max-width: 400px;
+        min-width: 360px;
+        max-height: 330px;
+        min-height: 240px; */
+        width: 500px;
+        height: 400px;
+    }
     .in-res{ 
         @apply text-center rounded-xl sm:w-20 md:w-36;
     }
