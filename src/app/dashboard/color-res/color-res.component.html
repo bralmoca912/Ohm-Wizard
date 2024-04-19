@@ -1,9 +1,137 @@
-<app-title title="Calculadoras para la ley de Ohm"></app-title>
+<app-title title="Código de colores para resistencias eléctricas"></app-title>
 
-<button class="bg-blue-600 rounded text-white mt-5 py-0.5 px-1.5" (click)="color1()">Color 1</button>
+<div class="border-y-2 border-slate-600/70 p-2">
+    <p class="text-sm text-justify mb-3 hidden md:block">
+        <strong>Importancia de los códigos de colores en resistencias</strong> <br>
+        Los colores en las resistencias dictan el valor en Ohms de las mismas. Conocer los códigos de colores de las
+        resistencias es esencial en electrónica y electricidad. Estos códigos
+        brindan detalles cruciales sobre la resistencia, facilitando el diseño y mantenimiento de circuitos. Al
+        interpretar correctamente los colores presentes en una resistencia, los ingenieros y técnicos pueden determinar
+        con precisión su resistencia eléctrica, lo que es vital para el diseño y mantenimiento de circuitos
+        electrónicos. Además, comprender los códigos de colores permite identificar fácilmente las resistencias y evitar
+        errores costosos durante la construcción y reparación de circuitos.
+    </p>
+    <p class="md:text-sm sm:text-xs text-justify">
+        <strong>Bienvenido</strong> <br>
+        A nuestra herramienta en línea para calcular el valor de las resistencias mediante sus códigos de
+        colores. Con solo ingresar los colores de las bandas en la resistencia, nuestra
+        calculadora proporcionará instantáneamente el valor de resistencia correspondiente.
+    </p>
+</div>
 
-<div>
-    @if (btnactual == 1) {
-        
-    }
+
+<div class="border-x-2 border-slate-600/70 p-1 mt-5">
+
+    <div class="md:text-xl text-white font-semibold bg-indigo-600 md:w-2/5 px-2">
+        <p>Calculadora de Resistencias por código de color</p>
+    </div>
+
+    <div
+        class="md:text-base sm:text-xs py-2 xl:flex xl:justify-center flex-wrap sm:grid sm:justify-items-center gap-7 mt-2">
+
+        <!----------------------- Imágen ------------------------>
+        <div class="grid justify-items-center">
+            <h3 class="font-serif font-semibold mb-2 text-center">1) Tabla de referencia de los códigos de colores</h3>
+            <img class="border- border-cyan-500 img-w-h"
+                src="https://cdn.energygo.es/embed/112632bd362b84e9b944a73a0c88b1660079672/Colores-resistencias-electricas.jpeg?imagick=1&size=750.png"
+                alt="">
+        </div>
+
+        <!----------------------- Botones ------------------------->
+        <div class="md:text-base sm:text-xs">
+            <h3 class="font-serif font-semibold mb-2 text-center">2) Elija los colores de su resistencia</h3>
+            <div class="border border-slate-400 grid grid-cols-3 w-48 mx-auto">
+                <div class="flex flex-col border-2 border-slate-400">
+                    <h2 class="text-center rounded px-1">Color 1</h2>
+                    <button (click)="color1(0)" (click)="calcresistencia()"
+                        class="border text-white bg-slate-950">O</button>
+                    <button (click)="color1(1)" (click)="calcresistencia()"
+                        class="border text-white bg-amber-950">O</button>
+                    <button (click)="color1(2)" (click)="calcresistencia()"
+                        class="border text-white bg-red-700">O</button>
+                    <button (click)="color1(3)" (click)="calcresistencia()"
+                        class="border text-white bg-orange-600">O</button>
+                    <button (click)="color1(4)" (click)="calcresistencia()"
+                        class="border text-white bg-yellow-400">O</button>
+                    <button (click)="color1(5)" (click)="calcresistencia()"
+                        class="border text-white bg-green-500">O</button>
+                    <button (click)="color1(6)" (click)="calcresistencia()"
+                        class="border text-white bg-blue-600">O</button>
+                    <button (click)="color1(7)" (click)="calcresistencia()"
+                        class="border text-white bg-purple-700">O</button>
+                    <button (click)="color1(8)" (click)="calcresistencia()"
+                        class="border text-white bg-gray-500">O</button>
+                    <button (click)="color1(9)" (click)="calcresistencia()"
+                        class="border text-black bg-slate-50">O</button>
+                </div>
+                <div class="flex flex-col border-2 border-slate-400">
+                    <h2 class="text-center rounded px-1">Color 2</h2>
+                    <button (click)="color2(0)" (click)="calcresistencia()"
+                        class="border text-white bg-slate-950">O</button>
+                    <button (click)="color2(1)" (click)="calcresistencia()"
+                        class="border text-white bg-amber-950">O</button>
+                    <button (click)="color2(2)" (click)="calcresistencia()"
+                        class="border text-white bg-red-700">O</button>
+                    <button (click)="color2(3)" (click)="calcresistencia()"
+                        class="border text-white bg-orange-600">O</button>
+                    <button (click)="color2(4)" (click)="calcresistencia()"
+                        class="border text-white bg-yellow-400">O</button>
+                    <button (click)="color2(5)" (click)="calcresistencia()"
+                        class="border text-white bg-green-500">O</button>
+                    <button (click)="color2(6)" (click)="calcresistencia()"
+                        class="border text-white bg-blue-600">O</button>
+                    <button (click)="color2(7)" (click)="calcresistencia()"
+                        class="border text-white bg-purple-700">O</button>
+                    <button (click)="color2(8)" (click)="calcresistencia()"
+                        class="border text-white bg-gray-500">O</button>
+                    <button (click)="color2(9)" (click)="calcresistencia()"
+                        class="border text-black bg-slate-50">O</button>
+                </div>
+                <div class="flex flex-col border-2 border-slate-400">
+                    <h2 class="text-center rounded px-1">Color 3</h2>
+                    <button (click)="color3(0)" (click)="calcresistencia()"
+                        class="border text-white bg-slate-950">O</button>
+                    <button (click)="color3(1)" (click)="calcresistencia()"
+                        class="border text-white bg-amber-950">O</button>
+                    <button (click)="color3(2)" (click)="calcresistencia()"
+                        class="border text-white bg-red-700">O</button>
+                    <button (click)="color3(3)" (click)="calcresistencia()"
+                        class="border text-white bg-orange-600">O</button>
+                    <button (click)="color3(4)" (click)="calcresistencia()"
+                        class="border text-white bg-yellow-400">O</button>
+                    <button (click)="color3(5)" (click)="calcresistencia()"
+                        class="border text-white bg-green-500">O</button>
+                    <button (click)="color3(6)" (click)="calcresistencia()"
+                        class="border text-white bg-blue-600">O</button>
+                    <button (click)="color3(7)" (click)="calcresistencia()"
+                        class="border text-white bg-purple-700">O</button>
+                    <button (click)="color3(8)" (click)="calcresistencia()"
+                        class="border text-white bg-gray-500">O</button>
+                    <button (click)="color3(9)" (click)="calcresistencia()"
+                        class="border text-black bg-slate-50">O</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------- Valor de la Resistencia ---------------->
+        <div class="md:text-base sm:text-xs">
+            <h3 class="font-serif font-semibold mb-2 text-center">3) Resultado Calculado</h3>
+            <div class="border-2 border-cyan-600 my-auto grid justify-items-centera place-items-center p-2">
+                <h1 class="md:text-xl sm:text-base font-semibold mb-2">Valor de la resistencia:</h1>
+                <div class="border border-black rounded-xl px-1 mb-6 max-w-48">
+                    @if (opColor1 != 10 && opColor2 != 10 && opColor3 != 10) {
+                    <p class="text-cyan-600 text-xl font-bold text-center">{{valresistencia}} Ohms </p>
+                    }@else {
+                    <p class="text-slate-500 text-center"> 0 Ohms</p>
+                    <p class="text-slate-500 text-center">Selecciones los 3 colores</p>
+                    }
+                </div>
+                @if (opColor1 != 10) { <p>Color 1: <span class="font-semibold">{{opColor1}} Ohms</span> </p>}
+                @if (opColor2 != 10) {<p>Color 2: <span class="font-semibold">{{opColor2}} Ohms</span> </p>}
+                @if (opColor3 != 10) {<p>Color 3: <span class="font-semibold">{{opColor3}} Ohms</span> </p>}
+            </div>
+        </div>
+    </div>
+
+
 </div>
