@@ -22,12 +22,11 @@
 
 <div class="border-x-2 border-slate-600/70 p-1 mt-5">
 
-    <div class="md:text-xl text-white font-semibold bg-indigo-600 md:w-2/5 px-2">
+    <div class="md:text-xl sm:text-sm text-white font-semibold bg-indigo-600 px-2 py-1">
         <p>Calculadora de Resistencias por código de color</p>
     </div>
 
-    <div
-        class="md:text-base sm:text-xs py-2 xl:flex xl:justify-center flex-wrap sm:grid sm:justify-items-center gap-7 mt-2">
+    <div class="md:text-base sm:text-xs py-2 flex justify-center flex-wrap gap-7 mt-2">
 
         <!----------------------- Imágen ------------------------>
         <div class="grid justify-items-center">
@@ -120,15 +119,24 @@
                 <h1 class="md:text-xl sm:text-base font-semibold mb-2">Valor de la resistencia:</h1>
                 <div class="border border-black rounded-xl px-1 mb-6 max-w-48">
                     @if (opColor1 != 10 && opColor2 != 10 && opColor3 != 10) {
-                    <p class="text-cyan-600 text-xl font-bold text-center">{{valresistencia}} Ohms </p>
-                    }@else {
+                    <p class="text-cyan-600 text-xl font-bold text-center">
+                        @if (valresistencia >= 1000000000) {
+                        {{valresistencia/1000000000}} [GOhms]}
+                        @else if (valresistencia >= 1000000) {
+                        {{valresistencia/1000000}} [MOhms]}
+                        @else if (valresistencia >= 1000) {
+                        {{valresistencia/1000}} [KOhms]}
+                        @else {
+                        {{valresistencia}} [Ohms]
+                        } </p>}
+                    @else {
                     <p class="text-slate-500 text-center"> 0 Ohms</p>
                     <p class="text-slate-500 text-center">Selecciones los 3 colores</p>
                     }
                 </div>
-                @if (opColor1 != 10) { <p>Color 1: <span class="font-semibold">{{opColor1}} Ohms</span> </p>}
-                @if (opColor2 != 10) {<p>Color 2: <span class="font-semibold">{{opColor2}} Ohms</span> </p>}
-                @if (opColor3 != 10) {<p>Color 3: <span class="font-semibold">{{opColor3}} Ohms</span> </p>}
+                @if (opColor1 != 10) { <p>Color 1: <span class="font-semibold">{{opColor1}} [Ohms]</span> </p>}
+                @if (opColor2 != 10) {<p>Color 2: <span class="font-semibold">{{opColor2}} [Ohms]</span> </p>}
+                @if (opColor3 != 10) {<p>Color 3: <span class="font-semibold">{{opColor3}} [Ohms]</span> </p>}
             </div>
         </div>
     </div>
