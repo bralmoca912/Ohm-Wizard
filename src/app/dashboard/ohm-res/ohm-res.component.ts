@@ -11,22 +11,63 @@ import { TitleComponent } from '../../shared/title/title.component';
 })
 export default class OhmResComponent {
 
-  voltaje_r: number | undefined = undefined;
-  corriente_r: number | undefined = undefined;
-  resistencia_r: number | undefined = undefined;
+  ////* Calculadora de Resistencia *////
+  voltaje_r: any = 698741236568646;
+  corriente_r: any = 1;
+  resistencia_r: any = undefined;
+  sufijo_r: string = '[Ohm]';
   calcresistencia(): void {
-    // title = 'Calculadoras de la Ley de Ohm';
-    this.resistencia_r = parseFloat((this.voltaje_r! / this.corriente_r!).toFixed(2));
+    this.resistencia_r = this.voltaje_r! / this.corriente_r!;
+    if (this.resistencia_r < 0) {
+      this.resistencia_r = 'No existe';
+    }
+    if (this.resistencia_r >= 1000000000000) {
+      this.resistencia_r = 'Infinity';
+    }
+    if (this.resistencia_r >= 1000000000) {
+      this.resistencia_r = parseFloat((this.resistencia_r / 1000000000).toFixed(2));
+      this.sufijo_r = '[GOhm]'
+    }
+    else if (this.resistencia_r >= 1000000) {
+      this.resistencia_r = parseFloat((this.resistencia_r / 1000000).toFixed(2));
+      this.sufijo_r = '[MOhm]'
+    }
+    else if (this.resistencia_r >= 1000) {
+      this.resistencia_r = parseFloat((this.resistencia_r / 1000).toFixed(2));
+      this.sufijo_r = '[KOhm]'
+    }
+    else {
+      this.resistencia_r = parseFloat((this.resistencia_r).toFixed(2));
+      this.sufijo_r = '[Ohm]'
+    }
   }
 
+  ////* Calculadora de Voltaje *////
   voltaje_v: number | undefined = undefined;
   corriente_v: number | undefined = undefined;
   resistencia_v: number | undefined = undefined;
   calcvoltaje(): void {
     // title = 'Calculadoras de la Ley de Ohm';
-    this.voltaje_v = parseFloat((this.resistencia_v! * this.corriente_v!).toFixed(2));
+    this.voltaje_v = this.resistencia_v! * this.corriente_v!;
+    if (this.voltaje_v >= 1000000000) {
+      this.voltaje_v = parseFloat((this.voltaje_v / 1000000000).toFixed(2));
+      this.sufijo_r = '[GOhm]'
+    }
+    else if (this.voltaje_v >= 1000000) {
+      this.voltaje_v = parseFloat((this.voltaje_v / 1000000).toFixed(2));
+      this.sufijo_r = '[MOhm]'
+    }
+    else if (this.voltaje_v >= 1000) {
+      this.voltaje_v = parseFloat((this.voltaje_v / 1000).toFixed(2));
+      this.sufijo_r = '[KOhm]'
+    }
+    else {
+      this.voltaje_v = parseFloat((this.voltaje_v).toFixed(2));
+      this.sufijo_r = '[Ohm]'
+    }
   }
 
+  ////* Calculadora de Corriente *////
   voltaje_c: number | undefined = undefined;
   corriente_c: number | undefined = undefined;
   resistencia_c: number | undefined = undefined;

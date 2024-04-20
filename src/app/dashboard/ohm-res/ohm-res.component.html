@@ -1,6 +1,6 @@
 <app-title title="Calculadoras para la ley de Ohm"></app-title>
 
-<div class="border-y-2 border-slate-600 p-2">
+<!-- <div class="border-y-2 border-slate-600 p-2">
     <p class="text-sm text-justify hidden md:block">
         La <strong>ley de Ohm</strong> es un principio fundamental en la electrónica que establece la relación entre la
         <strong>corriente
@@ -20,27 +20,27 @@
         y la seguridad de los
         circuitos eléctricos, así como para dimensionar componentes como resistencias, cables y fuentes de alimentación.
     </p>
-</div>
+</div> -->
 
-<div class="flex flex-wrap place-content-around gap-8 mt-6">
+<div class="flex flex-wrap place-content-around md:gap-8 sm:gap-4 mt-6">
 
     <!-------------- Resistencia por ley de Ohm -------------->
     <div class="box-res">
-        <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base text-">
+        <div class="border border-black rounded-lg pl-1 py-2 sm:text-xs md:text-base text-">
             <h2 class="text-center font-semibold">Caculadora de Resistencias (R=V/I)</h2>
             <label class="ml-4">Voltaje:</label>
             <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_r">
             [v]<br>
             <label>Corriente:</label>
             <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_r">
-            [A]<br>
-            <div class="flex">
-                <button class="bg-blue-600 rounded text-white mt-5 py-0.5 px-1.5" (click)="calcresistencia()">Calcular
-                    =></button>
-                <div class="flex font-semibold pt-5 ml-3.5">
-                    <p>Recistencia:</p>
-                    <p class="text-blue-600 text-4xl -mt-3.5 font-bold ml-2">{{resistencia_r}}</p>
-                </div>
+            [A]
+            <div class="mt-4">
+                <button class=" bg-blue-600 rounded text-white px-1" (click)="calcresistencia()">Calcular</button>
+            </div>
+            <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
+                <p class="py-1">Resistencia: </p>
+                <p class="text-blue-600 md:text-2xl sm:text-base">{{resistencia_r}}</p>
+                <p>{{sufijo_r}}</p>
             </div>
         </div>
     </div>
@@ -56,8 +56,8 @@
             <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_v">
             [Ohms]<br>
             <div class="flex">
-                <button class="bg-blue-600 rounded text-white mt-5 py-0.5 px-1.5" (click)="calcvoltaje()">Calcular
-                    =></button>
+                <button class="bg-blue-600 rounded text-white mt-5 py-0.5 px-1.5"
+                    (click)="calcvoltaje()">Calcular</button>
                 <div class="flex font-semibold pt-5 ml-3.5">
                     <p>Voltaje:</p>
                     <p class="text-blue-600 text-4xl -mt-3.5 font-bold ml-2">{{voltaje_v}}</p>
