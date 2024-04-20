@@ -60,7 +60,6 @@ export default class ColorResComponent {
 
   calcresistencia(): void {
     this.valresistencia = (this.opColor1 * 10 + this.opColor2) * 10 ** this.opColor3;
-    console.log(this.opColor1)
   }
 
 }
