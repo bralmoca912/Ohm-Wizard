@@ -22,133 +22,139 @@
     </p>
 </div>
 
-<div class="flex flex-wrap place-content-around md:gap-8 sm:gap-4 mt-6">
+<div class="border-x-2 border-slate-600/70 pr-1 pt-1 mt-5">
 
-    <!-------------- Resistencia por ley de Ohm -------------->
-    <div class="box-res">
-        <div class="border border-black rounded-lg pl-1 py-2 sm:text-xs md:text-base text-">
-            <h2 class="text-center font-semibold">Caculadora de Resistencias (R=V/I)</h2>
-            <label class="ml-4">Voltaje:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_r">
-            [v] <br>
-            <label>Corriente:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_r">
-            [A]
-            <div class="mt-4">
-                <button class=" bg-blue-600 rounded text-white px-1" (click)="calcresistencia()">Calcular</button>
+    <div class="md:text-xl sm:text-sm text-white font-semibold bg-indigo-600 px-2 py-1">
+        <p>Calculadoras mediante valores de la ley de Ohm</p>
+    </div>
+
+    <div class="flex flex-wrap place-content-around md:gap-8 sm:gap-4 pl-1 mt-6">
+
+        <!-------------- Resistencia por ley de Ohm -------------->
+        <div class="box-res">
+            <div class="border border-black rounded-lg pl-1 py-2 sm:text-xs md:text-base text-">
+                <h2 class="text-center font-semibold">Caculadora de Resistencias (R=V/I)</h2>
+                <label class="ml-4">Voltaje:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_r">
+                [v] <br>
+                <label>Corriente:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_r">
+                [A]
+                <div class="mt-4">
+                    <button class=" bg-blue-600 rounded text-white px-1" (click)="calcresistencia()">Calcular</button>
+                </div>
+                <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
+                    <p class="py-1">Resultado: </p>
+                    <p class="text-blue-600 md:text-2xl sm:text-base">{{resistencia_r}}</p>
+                    <p>{{sufijo_r}}</p>
+                </div>
             </div>
-            <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
-                <p class="py-1">Resultado: </p>
-                <p class="text-blue-600 md:text-2xl sm:text-base">{{resistencia_r}}</p>
-                <p>{{sufijo_r}}</p>
+        </div>
+
+        <!-------------- Voltaje por ley de Ohm -------------->
+        <div class="box-res">
+            <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
+                <h2 class="text-center font-semibold">Caculadora de Voltaje (V=I*R)</h2>
+                <label class="ml-2.5">Corriente:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_v">
+                [A]<br>
+                <label>Resistencia:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_v">
+                [Ohm]
+                <div class="mt-4">
+                    <button class=" bg-blue-600 rounded text-white px-1" (click)="calcvoltaje()">Calcular</button>
+                </div>
+                <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
+                    <p class="py-1">Resultado: </p>
+                    <p class="text-blue-600 md:text-2xl sm:text-base">{{voltaje_v}}</p>
+                    <p>{{sufijo_v}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-------------- Corriente por ley de Ohm -------------->
+        <div class="box-res">
+            <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
+                <h2 class="text-center font-semibold">Caculadora de Corriente (I=V/R)</h2>
+                <label class="ml-6">Voltaje:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_c">
+                [v] <br>
+                <label>Resitencia:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_c">
+                [Ohm]
+                <div class="mt-4">
+                    <button class=" bg-blue-600 rounded text-white px-1" (click)="calccorriente()">Calcular</button>
+                </div>
+                <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
+                    <p class="py-1">Resultado: </p>
+                    <p class="text-blue-600 md:text-2xl sm:text-base">{{corriente_c}}</p>
+                    <p>{{sufijo_c}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-------------- Potencia-1 por ley de Ohm -------------->
+        <div class="box-res">
+            <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
+                <h2 class="text-center font-semibold">Caculadora de Potencia-1 (P=V*I)</h2>
+                <label class="ml-4">Voltaje:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_p1">
+                [v] <br>
+                <label>Corriente:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_p1">
+                [A]
+                <div class="mt-4">
+                    <button class=" bg-blue-600 rounded text-white px-1" (click)="calcpotencia_p1()">Calcular</button>
+                </div>
+                <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
+                    <p class="py-1">Resultado: </p>
+                    <p class="text-blue-600 md:text-2xl sm:text-base">{{potencia_p1}}</p>
+                    <p>{{sufijo_p1}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-------------- Potencia-2 por ley de Ohm -------------->
+        <div class="box-res">
+            <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
+                <h2 class="text-center font-semibold">Caculadora de Potencia-2 (P=(I^2)*R)</h2>
+                <label class="ml-2.5">Corriente:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_p2">
+                [A] <br>
+                <label>Resistencia:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_p2">
+                [Ohm]
+                <div class="mt-4">
+                    <button class=" bg-blue-600 rounded text-white px-1" (click)="calcpotencia_p2()">Calcular</button>
+                </div>
+                <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
+                    <p class="py-1">Resultado: </p>
+                    <p class="text-blue-600 md:text-2xl sm:text-base">{{potencia_p2}}</p>
+                    <p>{{sufijo_p2}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-------------- Potencia-3 por ley de Ohm -------------->
+        <div class="box-res">
+            <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
+                <h2 class="text-center font-semibold">Caculadora de Potencia-3 (P=(V^2)/R)</h2>
+                <label class="ml-6">Voltaje:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_p3">
+                [v] <br>
+                <label>Resistencia:</label>
+                <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_p3">
+                [Ohm]
+                <div class="mt-4">
+                    <button class=" bg-blue-600 rounded text-white px-1" (click)="calcpotencia_p3()">Calcular</button>
+                </div>
+                <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
+                    <p class="py-1">Resultado: </p>
+                    <p class="text-blue-600 md:text-2xl sm:text-base">{{potencia_p3}}</p>
+                    <p>{{sufijo_p3}}</p>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-------------- Voltaje por ley de Ohm -------------->
-    <div class="box-res">
-        <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
-            <h2 class="text-center font-semibold">Caculadora de Voltaje (V=I*R)</h2>
-            <label class="ml-2.5">Corriente:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_v">
-            [A]<br>
-            <label>Resistencia:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_v">
-            [Ohm]
-            <div class="mt-4">
-                <button class=" bg-blue-600 rounded text-white px-1" (click)="calcvoltaje()">Calcular</button>
-            </div>
-            <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
-                <p class="py-1">Resultado: </p>
-                <p class="text-blue-600 md:text-2xl sm:text-base">{{voltaje_v}}</p>
-                <p>{{sufijo_v}}</p>
-            </div>
-        </div>
-    </div>
-
-    <!-------------- Corriente por ley de Ohm -------------->
-    <div class="box-res">
-        <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
-            <h2 class="text-center font-semibold">Caculadora de Corriente (I=V/R)</h2>
-            <label class="ml-6">Voltaje:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_c">
-            [v] <br>
-            <label>Resitencia:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_c">
-            [Ohm]
-            <div class="mt-4">
-                <button class=" bg-blue-600 rounded text-white px-1" (click)="calccorriente()">Calcular</button>
-            </div>
-            <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
-                <p class="py-1">Resultado: </p>
-                <p class="text-blue-600 md:text-2xl sm:text-base">{{corriente_c}}</p>
-                <p>{{sufijo_c}}</p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-------------- Potencia-1 por ley de Ohm -------------->
-    <div class="box-res">
-        <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
-            <h2 class="text-center font-semibold">Caculadora de Potencia-1 (P=V*I)</h2>
-            <label class="ml-4">Voltaje:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_p1">
-            [v] <br>
-            <label>Corriente:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_p1">
-            [A]
-            <div class="mt-4">
-                <button class=" bg-blue-600 rounded text-white px-1" (click)="calcpotencia_p1()">Calcular</button>
-            </div>
-            <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
-                <p class="py-1">Resultado: </p>
-                <p class="text-blue-600 md:text-2xl sm:text-base">{{potencia_p1}}</p>
-                <p>{{sufijo_p1}}</p>
-            </div>
-        </div>
-    </div>
-
-    <!-------------- Potencia-2 por ley de Ohm -------------->
-    <div class="box-res">
-        <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
-            <h2 class="text-center font-semibold">Caculadora de Potencia-2 (P=(I^2)*R)</h2>
-            <label class="ml-2.5">Corriente:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="corriente_p2">
-            [A] <br>
-            <label>Resistencia:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_p2">
-            [Ohm]
-            <div class="mt-4">
-                <button class=" bg-blue-600 rounded text-white px-1" (click)="calcpotencia_p2()">Calcular</button>
-            </div>
-            <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
-                <p class="py-1">Resultado: </p>
-                <p class="text-blue-600 md:text-2xl sm:text-base">{{potencia_p2}}</p>
-                <p>{{sufijo_p2}}</p>
-            </div>
-        </div>
-    </div>
-
-    <!-------------- Potencia-3 por ley de Ohm -------------->
-    <div class="box-res">
-        <div class="border border-black rounded-lg px-1 py-2 sm:text-xs md:text-base">
-            <h2 class="text-center font-semibold">Caculadora de Potencia-3 (P=(V^2)/R)</h2>
-            <label class="ml-6">Voltaje:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="voltaje_p3">
-            [v] <br>
-            <label>Resistencia:</label>
-            <input class="border border-slate-400 in-res mt-2 ml-2" type="number" [(ngModel)]="resistencia_p3">
-            [Ohm]
-            <div class="mt-4">
-                <button class=" bg-blue-600 rounded text-white px-1" (click)="calcpotencia_p3()">Calcular</button>
-            </div>
-            <div class="flex items-center justify-center font-semibold gap-x-2 px-1">
-                <p class="py-1">Resultado: </p>
-                <p class="text-blue-600 md:text-2xl sm:text-base">{{potencia_p3}}</p>
-                <p>{{sufijo_p3}}</p>
-            </div>
-        </div>
-    </div>
-</div>

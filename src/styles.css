@@ -4,7 +4,7 @@
 
 @layer{
     .box-res{ @apply
-        sm:max-w-60 sm:min-w-56 md:min-w-72 md:max-w-80 mb-5;
+        sm:max-w-60 sm:min-w-52 md:min-w-72 md:max-w-80 mb-5;
     }
     .img-w-h{
         /* max-width: 400px;
