@@ -3,7 +3,7 @@
 <div class="border-y-2 border-slate-600/70 p-2">
     <p class="text-sm text-justify mb-3 hidden md:block">
         <strong>Importancia de los códigos de colores en resistencias</strong> <br>
-        Los colores en las resistencias dictan el valor en Ohms de las mismas. Conocer los códigos de colores de las
+        Los colores en las resistencias dictan el valor en Ohm de las mismas. Conocer los códigos de colores de las
         resistencias es esencial en electrónica y electricidad. Estos códigos
         brindan detalles cruciales sobre la resistencia, facilitando el diseño y mantenimiento de circuitos. Al
         interpretar correctamente los colores presentes en una resistencia, los ingenieros y técnicos pueden determinar
@@ -151,16 +151,16 @@
                     @if (opColor1 != 10 && opColor2 != 10 && opColor3 != 10) {
                     <p class="text-cyan-600 text-xl font-bold text-center">
                         @if (valresistencia >= 1000000000) {
-                        {{valresistencia/1000000000}} [GOhms]}
+                        {{valresistencia/1000000000}} [GOhm]}
                         @else if (valresistencia >= 1000000) {
-                        {{valresistencia/1000000}} [MOhms]}
+                        {{valresistencia/1000000}} [MOhm]}
                         @else if (valresistencia >= 1000) {
-                        {{valresistencia/1000}} [KOhms]}
+                        {{valresistencia/1000}} [KOhm]}
                         @else {
-                        {{valresistencia}} [Ohms]
+                        {{valresistencia}} [Ohm]
                         } </p>}
                     @else {
-                    <p class="text-slate-500 text-center"> 0 Ohms</p>
+                    <p class="text-slate-500 text-center"> 0 Ohm</p>
                     <p class="text-slate-500 text-center">Selecciones los 3 colores</p>
                     }
                 </div>

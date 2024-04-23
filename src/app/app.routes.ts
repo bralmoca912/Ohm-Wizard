@@ -16,11 +16,6 @@ export const routes: Routes = [
                 loadComponent: () => import('./dashboard//color-res/color-res.component')
             },
             {
-                path: 'opams',
-                title: 'Amplificador operacional',
-                loadComponent: () => import('./dashboard/opams/opams.component')
-            },
-            {
                 path: '',
                 redirectTo: 'ohm-res',
                 pathMatch: 'full'
