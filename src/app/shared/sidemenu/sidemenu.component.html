@@ -1,28 +1,54 @@
-<!-- Barra lateral de navegación -->
-<div class="bg-slate-100 min-h-screen h-full pt-2 sm:w-28 md:w-48">
-    <div class="sm:px-4 mb-8">
-        <h1 class="text-lg sm:text-lg md:text-xl font-bold text-black">
-            Ohm <span class="text-blue-500">W</span>izard
-        </h1>
-        <p class="text-slate-500 text-sm">Soluciones electrónicas</p>
-    </div>
+<div class="bg-slate-200 min-h-screen h-full lg:max-w-48 sm:max-w-28">
 
-    <a href="" class="space-x-2 items-center px-2 flex flex-col mb-12">
-        <img class="w-20 rounded-full"
-            src="https://www.shutterstock.com/image-photo/electronic-circuit-board-close-up-600nw-1568488030.jpg"
-            alt="">
-        <p class="text-center">Welcome back</p>
-    </a>
-
-    <nav class="md:mx-2">
-        @for (item of menuItems; track $index) {
-        <a [routerLink]="item.path" routerLinkActive="bg-gradient-to-r from-cyan-700 to-cyan-500 text-white"
-            class="w-full border-b border-slate-400 block sm:p-1 md:px-2 py-4 my-1 transition duration-200 hover:bg-slate-400/20">
-            <div class="flex flex-col">
-                <span class="font-semibold leading-5">{{ item.title }}</span>
-                <span class="text-sm md:block">{{ item.path }}</span>
-            </div>
-        </a>
+    <button class="grid justify-items-center px-2" (click)="toogleshow()">
+        @if (showSidemenu == false) {
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <p class="mt-1 mb-5">Menú</p>
         }
-    </nav>
+    </button>
+
+
+    <div class="" [ngClass]="{ 'hidden': !showSidemenu }">
+
+        <div class="flex justify-between pl-2 pt-1">
+            <div class="mb-8">
+                <h1 class="text-lg sm:text-lg lg:text-xl font-bold text-black text-center">
+                    Ohm <span class="text-blue-500">W</span>izard
+                </h1>
+                <p class="text-slate-500 text-sm text-center">Soluciones electrónicas</p>
+            </div>
+            <!-- Botón de cierre de barra de navegación -->
+            <button class="grid place-items-start" (click)="toogleshow()">
+                @if (showSidemenu == true) { <!--Botón cerrar menú-->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>}
+            </button>
+            <!-- Cierre del botón -->
+        </div>
+
+        <a href="" class="space-x-2 items-center px-2 flex flex-col mb-12">
+            <img class="w-20 rounded-full"
+                src="https://www.shutterstock.com/image-photo/electronic-circuit-board-close-up-600nw-1568488030.jpg"
+                alt="">
+            <p class="text-center">Welcome back</p>
+        </a>
+
+        <nav class="lg:mx-2">
+            @for (item of menuItems; track $index) {
+            <a [routerLink]="item.path" routerLinkActive="bg-gradient-to-r from-cyan-700 to-cyan-500 text-white"
+                class="w-full border-b border-slate-400 block sm:p-1 md:px-2 py-4 my-1 transition duration-200 hover:bg-slate-400/30">
+                <div class="flex flex-col">
+                    <span class="font-semibold leading-5">{{ item.title }}</span>
+                    <span class="text-sm md:block">{{ item.path }}</span>
+                </div>
+            </a>
+            }
+        </nav>
+    </div>
 </div>

@@ -19,4 +19,9 @@ export class SidemenuComponent {
     .filter((route) => !route.path?.includes(':'));
 
   constructor() { }
+
+  showSidemenu: boolean = true;
+  toogleshow() {
+    this.showSidemenu = !this.showSidemenu;
+  }
 }
