@@ -28,148 +28,201 @@
 
     <div class="md:text-base sm:text-xs py-2 flex justify-center flex-wrap lg:gap-20 gap-7 mt-2 px-1">
 
-        <!----------------------- Imágen ------------------------>
-        <div class="grid justify-items-center">
-            <h3 class="font-serif font-semibold mb-2 text-center">1) Tabla de referencia de los códigos de colores</h3>
-            <img class="border- border-cyan-500 img-w-h"
-                src="https://cdn.energygo.es/embed/112632bd362b84e9b944a73a0c88b1660079672/Colores-resistencias-electricas.jpeg?imagick=1&size=750.png"
-                alt="">
-        </div>
 
-        <!----------------------- Botones ------------------------->
-        <div class="md:text-base sm:text-xs">
-            <h3 class="font-serif font-semibold mb-2 text-center">2) Elija los colores de su resistencia</h3>
-            <div class="border border-slate-400 grid grid-cols-3 w-48 mx-auto">
-                <div class="flex flex-col border-2 border-slate-400">
-                    <h2 class="text-center rounded px-1">Color 1</h2>
-                    <button (click)="color1(0)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-slate-950">@if(opColor1==0){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(1)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-amber-950">@if(opColor1==1){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(2)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-red-700">@if(opColor1==2){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(3)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-orange-600">@if(opColor1==3){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(4)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-yellow-400">@if(opColor1==4){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(5)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-green-500">@if(opColor1==5){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(6)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-blue-600">@if(opColor1==6){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(7)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-purple-700">@if(opColor1==7){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(8)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-gray-500">@if(opColor1==8){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color1(9)" (click)="calcresistencia()"
-                        class="border text-black py-3 bg-slate-50">@if(opColor1==9){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                </div>
-                <div class="flex flex-col border-2 border-slate-400">
-                    <h2 class="text-center rounded px-1">Color 2</h2>
-                    <button (click)="color2(0)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-slate-950">@if(opColor2==0){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(1)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-amber-950">@if(opColor2==1){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(2)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-red-700">@if(opColor2==2){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(3)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-orange-600">@if(opColor2==3){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(4)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-yellow-400">@if(opColor2==4){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(5)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-green-500">@if(opColor2==5){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(6)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-blue-600">@if(opColor2==6){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(7)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-purple-700">@if(opColor2==7){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(8)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-gray-500">@if(opColor2==8){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color2(9)" (click)="calcresistencia()"
-                        class="border text-black py-3 bg-slate-50">@if(opColor2==9){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                </div>
-                <div class="flex flex-col border-2 border-slate-400">
-                    <h2 class="text-center rounded px-1">Color 3</h2>
-                    <button (click)="color3(0)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-slate-950">@if(opColor3==0){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(1)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-amber-950">@if(opColor3==1){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(2)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-red-700">@if(opColor3==2){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(3)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-orange-600">@if(opColor3==3){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(4)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-yellow-400">@if(opColor3==4){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(5)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-green-500">@if(opColor3==5){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(6)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-blue-600">@if(opColor3==6){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(7)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-purple-700">@if(opColor3==7){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(8)" (click)="calcresistencia()"
-                        class="border text-white py-3 bg-gray-500">@if(opColor3==8){ <p class="font-bold -my-3">O</p>
-                        }</button>
-                    <button (click)="color3(9)" (click)="calcresistencia()"
-                        class="border text-black py-3 bg-slate-50">@if(opColor3==9){ <p class="font-bold -my-3">O</p>
-                        }</button>
+        <div class="flex justify-center flex-wrap lg:gap-x-20 gap-7 mt-2 px-1">
+            <!----------------------- Botones ------------------------->
+            <div class="md:text-base sm:text-xs">
+                <h3 class="font-serif font-semibold mb-2 text-center">1) Elija los colores de su resistencia</h3>
+                <div class="border border-slate-400 grid grid-cols-3 w-48 mx-auto">
+                    <div class="flex flex-col border border-slate-400">
+                        <h2 class="text-center text-sm rounded px-1">Color 1</h2>
+                        <button (click)="color1(0)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-slate-950">@if(opColor1==0){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color1(1)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-amber-950">@if(opColor1==1){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color1(2)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-red-700">@if(opColor1==2){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color1(3)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-orange-600">@if(opColor1==3){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color1(4)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-yellow-400">@if(opColor1==4){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color1(5)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-green-500">@if(opColor1==5){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color1(6)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-blue-600">@if(opColor1==6){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color1(7)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-purple-700">@if(opColor1==7){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color1(8)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-gray-500">@if(opColor1==8){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color1(9)" (click)="calcresistencia()"
+                            class="border text-black py-2.5 bg-slate-50">@if(opColor1==9){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                    </div>
+                    <div class="flex flex-col border border-slate-400">
+                        <h2 class="text-center text-sm rounded px-1">Color 2</h2>
+                        <button (click)="color2(0)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-slate-950">@if(opColor2==0){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color2(1)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-amber-950">@if(opColor2==1){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color2(2)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-red-700">@if(opColor2==2){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color2(3)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-orange-600">@if(opColor2==3){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color2(4)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-yellow-400">@if(opColor2==4){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color2(5)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-green-500">@if(opColor2==5){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color2(6)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-blue-600">@if(opColor2==6){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color2(7)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-purple-700">@if(opColor2==7){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color2(8)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-gray-500">@if(opColor2==8){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color2(9)" (click)="calcresistencia()"
+                            class="border text-black py-2.5 bg-slate-50">@if(opColor2==9){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                    </div>
+                    <div class="flex flex-col border border-slate-400">
+                        <h2 class="text-center text-sm rounded px-1">Color 3</h2>
+                        <button (click)="color3(0)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-slate-950">@if(opColor3==0){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color3(1)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-amber-950">@if(opColor3==1){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color3(2)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-red-700">@if(opColor3==2){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color3(3)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-orange-600">@if(opColor3==3){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color3(4)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-yellow-400">@if(opColor3==4){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color3(5)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-green-500">@if(opColor3==5){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color3(6)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-blue-600">@if(opColor3==6){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color3(7)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-purple-700">@if(opColor3==7){ <p class="font-bold -my-3">
+                                O
+                            </p>
+                            }</button>
+                        <button (click)="color3(8)" (click)="calcresistencia()"
+                            class="border text-white py-2.5 bg-gray-500">@if(opColor3==8){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                        <button (click)="color3(9)" (click)="calcresistencia()"
+                            class="border text-black py-2.5 bg-slate-50">@if(opColor3==9){ <p class="font-bold -my-3">O
+                            </p>
+                            }</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!------------- Valor de la Resistencia ---------------->
-        <div class="md:text-base sm:text-xs">
-            <h3 class="font-serif font-semibold mb-2 text-center">3) Resultado Calculado</h3>
-            <div class="border-2 border-cyan-600 my-auto grid justify-items-centera place-items-center p-2">
-                <h1 class="md:text-xl sm:text-base font-semibold mb-2">Valor de la resistencia:</h1>
-                <div class="border border-black rounded-xl px-1 mb-6 max-w-48">
-                    @if (opColor1 != 10 && opColor2 != 10 && opColor3 != 10) {
-                    <p class="text-cyan-600 text-xl font-bold text-center">
-                        @if (valresistencia >= 1000000000) {
-                        {{valresistencia/1000000000}} [GOhm]}
-                        @else if (valresistencia >= 1000000) {
-                        {{valresistencia/1000000}} [MOhm]}
-                        @else if (valresistencia >= 1000) {
-                        {{valresistencia/1000}} [KOhm]}
+            <!------------- Valor de la Resistencia ---------------->
+            <div class="md:text-base sm:text-xs">
+                <h3 class="font-serif font-semibold mb-2 text-center">2) Resultado Calculado</h3>
+                <div class="border-2 border-cyan-600 my-auto grid justify-items-centera place-items-center p-2">
+                    <h1 class="md:text-xl sm:text-base font-semibold mb-2">Valor de la resistencia:</h1>
+                    <div class="border border-black rounded-xl px-1 mb-6 max-w-48">
+                        @if (opColor1 != 10 && opColor2 != 10 && opColor3 != 10) {
+                        <p class="text-cyan-600 text-xl font-bold text-center">
+                            @if (valresistencia >= 1000000000) {
+                            {{valresistencia/1000000000}} [GOhm]}
+                            @else if (valresistencia >= 1000000) {
+                            {{valresistencia/1000000}} [MOhm]}
+                            @else if (valresistencia >= 1000) {
+                            {{valresistencia/1000}} [KOhm]}
+                            @else {
+                            {{valresistencia}} [Ohm]
+                            } </p>}
                         @else {
-                        {{valresistencia}} [Ohm]
-                        } </p>}
-                    @else {
-                    <p class="text-slate-500 text-center"> 0 Ohm</p>
-                    <p class="text-slate-500 text-center">Selecciones los 3 colores</p>
-                    }
+                        <p class="text-slate-500 text-center"> 0 Ohm</p>
+                        <p class="text-slate-500 text-center">Selecciones los 3 colores</p>
+                        }
+                    </div>
+                    @if (opColor1 != 10) { <p>Color 1: <span class="font-semibold">{{opColor1}}</span> </p>}
+                    @if (opColor2 != 10) {<p>Color 2: <span class="font-semibold">{{opColor2}}</span> </p>}
+                    @if (opColor3 != 10) {<p>Color 3: <span class="font-semibold">x10^{{opColor3}}</span> </p>}
                 </div>
-                @if (opColor1 != 10) { <p>Color 1: <span class="font-semibold">{{opColor1}}</span> </p>}
-                @if (opColor2 != 10) {<p>Color 2: <span class="font-semibold">{{opColor2}}</span> </p>}
-                @if (opColor3 != 10) {<p>Color 3: <span class="font-semibold">x10^{{opColor3}}</span> </p>}
+            </div>
+
+            <!----------------------- Imágenes ------------------------>
+            <div class="grid xl:grid-cols-2 sm:grid-cols-1 gap-x-5">
+                <div class="grid justify-items-center -mx-2">
+                    <h3 class="font-serif font-semibold mb-2 text-center">3.1) Tabla de referencia de los códigos de
+                        colores
+                    </h3>
+                    <img class="img-w-h"
+                        src="https://cdn.energygo.es/embed/112632bd362b84e9b944a73a0c88b1660079672/Colores-resistencias-electricas.jpeg?imagick=1&size=750.png"
+                        alt="">
+                </div>
+                <div class="grid justify-items-center -mx-1">
+                    <h3 class="font-serif font-semibold mb-2 text-center">3.2) Tabla de referencia de resistencias
+                        comerciales
+                    </h3>
+                    <img class="img-w-h border-2 border-black"
+                        src="https://hetpro-store.com/TUTORIALES/wp-content/uploads/2015/03/1222-e1427209221856.png"
+                        alt="">
+                </div>
             </div>
         </div>
+
+
     </div>
-
-
-</div>
