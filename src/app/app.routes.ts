@@ -7,7 +7,7 @@ export const routes: Routes = [
         children: [
             {
                 path: 'ohm-res',
-                title: 'Ley de Ohm (V-I-R-P)',
+                title: 'Calculadoras de Ohm',
                 loadComponent: () => import('./dashboard/ohm-res/ohm-res.component')
             },
             {
