@@ -2,6 +2,9 @@
 
 Proyecto creado en [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
+## Page del proyecto
+https://bralmoca912.github.io/Ohm-Wizard
+
 ## Finalidad del proyecto
 Ohm Wizard es una página web diseñada para ofrecer herramientas útiles a estudiantes de electrónica, proporcionando cálculos rápidos y una manera intuitiva de identificar valores de resistencias.
 
